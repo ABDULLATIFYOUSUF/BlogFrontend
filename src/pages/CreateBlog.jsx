@@ -23,7 +23,7 @@ function CreateBlog() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const {data} = await axios.post('https://blog-backend-seven-gamma.vercel.app/api/v1/blog/create-blog/', {
+        const {data} = await axios.post('https://blog-backend-neon.vercel.app/api/v1/blog/create-blog/', {
             title: inputs.title,
             description : inputs.description,
             image : inputs.image,
