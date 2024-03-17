@@ -23,7 +23,7 @@ function BlogDetails() {
                 })
             }
         } catch (error) {
-            console.log(error)
+            console.error(error)
         }
     }
     useEffect(() => {
@@ -52,7 +52,7 @@ function BlogDetails() {
               navigate('/my-blogs')
           }
       } catch (error) {
-          console.log(error)
+          console.error(error)
       }
     };
   return (
