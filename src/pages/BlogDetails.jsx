@@ -13,7 +13,7 @@ function BlogDetails() {
 
     const getBlogDetail = async () => {
         try {
-            const {data} = await axios.get(`https://blog-backend-steel-two.vercel.app/api/v1/blog/get-blog/${id}`)
+            const {data} = await axios.get(`http://localhost:8080/api/v1/blog/get-blog/${id}`)
             if(data?.success){
                 setBlog(data?.blog)
                 setInputs({
@@ -41,7 +41,7 @@ function BlogDetails() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-          const {data} = await axios.put(`https://blog-backend-steel-two.vercel.app/api/v1/blog/update-blog/${id}`, {
+          const {data} = await axios.put(`http://localhost:8080/api/v1/blog/update-blog/${id}`, {
               title: inputs.title,
               description : inputs.description,
               image : inputs.image,

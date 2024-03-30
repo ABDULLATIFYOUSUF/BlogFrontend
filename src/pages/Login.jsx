@@ -26,7 +26,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const {data} = await axios.post(`https://blog-backend-steel-two.vercel.app/api/v1/user/login`, {
+      const {data} = await axios.post(`http://localhost:8080/api/v1/user/login`, {
         email: inputs.email,
         password : inputs.password
       });

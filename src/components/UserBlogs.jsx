@@ -10,7 +10,7 @@ function UserBlogs() {
     try {
       const id = localStorage.getItem("userId");
       const { data } = await axios.get(
-        `https://blog-backend-steel-two.vercel.app/api/v1/blog/user-blog/${id}`
+        `http://localhost:8080/api/v1/blog/user-blog/${id}`
       );
       if (data?.success) {
         setBlogs(data.userBlog.blogs);
