@@ -3,6 +3,7 @@ import { Box, Button, InputLabel, TextField, Typography } from "@mui/material";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { BASE_URL } from "../config";
 
 function CreateBlog() {
     const id = localStorage.getItem('userId')
@@ -23,7 +24,7 @@ function CreateBlog() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const {data} = await axios.post(`http://localhost:8080/api/v1/blog/create-blog/`, {
+        const {data} = await axios.post(`${BASE_URL}/api/v1/blog/create-blog/`, {
             title: inputs.title,
             description : inputs.description,
             image : inputs.image,
