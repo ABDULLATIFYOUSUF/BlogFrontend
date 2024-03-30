@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://blog-backend-neon.vercel.app",
+  "proxy": "https://blog-backend-steel-two.vercel.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
